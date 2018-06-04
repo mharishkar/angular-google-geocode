@@ -1,0 +1,71 @@
+<section class="form-section">
+    <form [formGroup]="addressForm" novalidate>
+      <div class="form-group">
+        <label for="first_name">User Name<b>*</b></label>
+        <input type="text" id="first_name" formControlName="username" >
+        <app-error-block
+          [controlName]="addressForm.controls.username">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Line One<b>*</b></label>
+        <input type="text" formControlName="line_one" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_one">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Line One<b>*</b></label>
+        <input type="text" formControlName="line_one" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_one">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Line One<b>*</b></label>
+        <input type="text" formControlName="line_one" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_one">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Line Two<b>*</b></label>
+        <input type="text" formControlName="line_two" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_two">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">state<b>*</b></label>
+        <input type="text" formControlName="state" >
+        <app-error-block
+          [controlName]="addressForm.controls.state">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">city<b>*</b></label>
+        <input type="text" formControlName="city" >
+        <app-error-block
+          [controlName]="addressForm.controls.city">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Country<b>*</b></label>
+        <input type="text" formControlName="country" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_one">
+        </app-error-block>
+      </div>
+      <div class="form-group">
+        <label for="email">Line One<b>*</b></label>
+        <input type="text" formControlName="line_one" >
+        <app-error-block
+          [controlName]="addressForm.controls.line_one">
+        </app-error-block>
+      </div>
+      <div>
+        <button class="btn submit-btn" [disabled]="addressForm.invalid" type="submit">Submit</button>
+        <button class="btn cancel-btn" type="reset">Cancel</button>
+      </div>
+    </form>
+</section>
