@@ -1,67 +1,31 @@
 <section class="form-section">
+    <div class="text-center">
+        <button type="button" class="btn submit-btn">Detect Location</button>
+     </div>
     <form [formGroup]="addressForm" novalidate>
       <div class="form-group">
-        <label for="first_name">User Name<b>*</b></label>
-        <input type="text" id="first_name" formControlName="username" >
-        <app-error-block
-          [controlName]="addressForm.controls.username">
-        </app-error-block>
+        <label for="line_one">Line One</label>
+        <input type="text" id="line_one" formControlName="line_one" >
       </div>
       <div class="form-group">
-        <label for="email">Line One<b>*</b></label>
-        <input type="text" formControlName="line_one" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_one">
-        </app-error-block>
+        <label for="line_two">Line Two</label>
+        <input type="text" id="line_two" formControlName="line_two" >
       </div>
       <div class="form-group">
-        <label for="email">Line One<b>*</b></label>
-        <input type="text" formControlName="line_one" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_one">
-        </app-error-block>
+        <label for="state">state</label>
+        <input type="text" id="state" formControlName="state" >
       </div>
       <div class="form-group">
-        <label for="email">Line One<b>*</b></label>
-        <input type="text" formControlName="line_one" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_one">
-        </app-error-block>
+        <label for="state">city</label>
+        <input type="text" id="city" formControlName="city" >
       </div>
       <div class="form-group">
-        <label for="email">Line Two<b>*</b></label>
-        <input type="text" formControlName="line_two" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_two">
-        </app-error-block>
+        <label for="country">Country</label>
+        <input type="text" id="country" formControlName="country" >
       </div>
       <div class="form-group">
-        <label for="email">state<b>*</b></label>
-        <input type="text" formControlName="state" >
-        <app-error-block
-          [controlName]="addressForm.controls.state">
-        </app-error-block>
-      </div>
-      <div class="form-group">
-        <label for="email">city<b>*</b></label>
-        <input type="text" formControlName="city" >
-        <app-error-block
-          [controlName]="addressForm.controls.city">
-        </app-error-block>
-      </div>
-      <div class="form-group">
-        <label for="email">Country<b>*</b></label>
-        <input type="text" formControlName="country" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_one">
-        </app-error-block>
-      </div>
-      <div class="form-group">
-        <label for="email">Line One<b>*</b></label>
-        <input type="text" formControlName="line_one" >
-        <app-error-block
-          [controlName]="addressForm.controls.line_one">
-        </app-error-block>
+        <label for="pin_code">Pincode</label>
+        <input type="text" id="pin_code" formControlName="pin_code" >
       </div>
       <div>
         <button class="btn submit-btn" [disabled]="addressForm.invalid" type="submit">Submit</button>
