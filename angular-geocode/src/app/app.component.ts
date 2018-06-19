@@ -11,7 +11,9 @@ declare var google;
 })
 export class AppComponent {
 
-  private addressForm : FormGroup;
+  addressForm : FormGroup;
+  loadScreen  : boolean = false;
+
   
   constructor(
     private formBuilder : FormBuilder,
@@ -34,15 +36,16 @@ export class AppComponent {
   }
 
   getLocation() {
+    this.loadScreen = true;    
     navigator.geolocation
         .getCurrentPosition(position => {
-          console.log(position);
             const latLng = {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
             this.loader.load().then(() => {
-            const geoCoder = new google.maps.Geocoder(); 
+            const geoCoder = new google.maps.Geocoder();
+            this.loadScreen = false; 
             
             geoCoder.geocode({ "location": latLng }, (results, status) => {
                 let formData = {
@@ -56,6 +59,6 @@ export class AppComponent {
                 this.addressForm.patchValue(formData);
              });
             });
-        })
+        });
   } 
 }
