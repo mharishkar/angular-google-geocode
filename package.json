@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "main": "server.js",
   "private": true,
   "dependencies": {
     "@agm/core": "^1.0.0-beta.3",
@@ -23,7 +24,8 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "express": "latest"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^6.0.3",
